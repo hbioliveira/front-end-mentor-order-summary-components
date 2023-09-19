@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+/* ---------- Primary ---------- */
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+
+/* ---------- Neutral ---------- */
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--very-pale-blue);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    max-width: 416px;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 15px 15px 50px 1px hsl(224, 23%, 55%, 60%);
+}
+
+main img {
+    width: 100%;
+}
+
+.text {
+    height: 65%;
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description h1 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+
+.description p {
+    color: var(--desaturated-blue);
+    margin: 0 2rem;
+    line-height: 1.5rem;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    margin: 1.5rem auto;
+    padding: 1rem 1.2rem;
+    width: 100%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.price img {
+    width: 20%;
+}
+
+.price-text {
+    text-align: left;
+}
+
+.price-text strong {
+    font-size: .9rem;
+}
+
+.price-text p {
+    color: var(--desaturated-blue);
+    font-size: .9rem;
+}
+
+.price-box  a {
+    color: var(--bright-blue);
+    font-weight: 700;
+    transition: .4s ease-in-out;
+    font-size: 0.8rem;
+}
+
+.price-box  a:hover {
+    color: var(--bright-blue);
+    opacity: 70%;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    font-weight: 700;
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 20px 0.1px hsla(223, 31%, 63%, 0.6);
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--bright-blue);
+    opacity: 70%;
+}
+
+.cancel-order-link {
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.cancel-order-link:hover {
+    color: black;
+}
+
+footer {
+    width: 90vw;
+}
+
+footer .attribution { 
+    font-size: .6rem; text-align: center;
+    margin-top: 1rem;
+}
+
+footer .attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ---------- RESPONSIVE ----------*/
+
+@media (max-width: 375px) {
+    main {
+        /* max-width:340px; */
+        max-width: 90vw;
+    }
+
+    .description h1 {
+        font-size: 1.5rem;
+        margin-top: 1rem;   
+    }
+
+    .description p {
+        margin: 0 1.2rem;
+        font-size: .9rem;
+    }
+
+    .text {
+        padding: 1.6rem;
+    }
+
+    .price-box {
+        padding: 1.2rem 1rem;
+    }
+}
